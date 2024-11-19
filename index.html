@@ -12,7 +12,7 @@
         <div class="container">
             <nav>
                 <div class="logo">
-                    <img src="klenup-logo.png" alt="Klen Up Logo">
+                    <img src="kln.jpeg" alt="Klen Up Logo">
                 </div>
                 <div class="actions">
                     <button class="btn-primary" id="loginBtn">Login</button>
@@ -27,6 +27,18 @@
     </header>
 
     <main>
+        <!-- About Section -->
+        <section id="about">
+            <div class="container">
+                <h2>About Klen Up</h2>
+                <p>
+                    Klen Up is an on-demand car wash service that brings high-quality, eco-friendly cleaning to your location. 
+                    Easily book online, and our professional team will handle the rest—at home, work, or anywhere you need.
+                </p>
+            </div>
+        </section>
+
+        <!-- Services Section -->
         <section id="services">
             <div class="container">
                 <h2>Our Services</h2>
@@ -50,56 +62,64 @@
             </div>
         </section>
 
-        <section id="value-prop">
+        <!-- Problems and Solutions -->
+        <section id="problems-solutions">
             <div class="container">
-                <h2>Why Choose Us?</h2>
-                <div class="features">
-                    <div class="feature">
-                        <h3>Convenience</h3>
-                        <p>Get your car washed wherever you are.</p>
+                <h2>Problems & Solutions</h2>
+                <div class="problems">
+                    <div class="problem">
+                        <h3>Problem</h3>
+                        <p>Traditional car wash services are time-consuming and not secure.</p>
                     </div>
-                    <div class="feature">
-                        <h3>Eco-Friendly</h3>
-                        <p>We use water-saving and non-toxic products.</p>
+                    <div class="solution">
+                        <h3>Solution</h3>
+                        <p>Klen Up reduces hassle with secure, eco-friendly services at your location.</p>
                     </div>
-                    <div class="feature">
-                        <h3>Trained Professionals</h3>
-                        <p>Our staff delivers high-quality, secure services.</p>
+                </div>
+                <div class="problems">
+                    <div class="problem">
+                        <h3>Problem</h3>
+                        <p>Government mandates automation for car washes, threatening non-compliant businesses.</p>
+                    </div>
+                    <div class="solution">
+                        <h3>Solution</h3>
+                        <p>Klen Up aligns with regulations, offering sustainable and compliant services.</p>
                     </div>
                 </div>
             </div>
         </section>
 
-        <section id="booking" class="hidden">
+        <!-- Revenue Streams -->
+        <section id="revenue-streams">
             <div class="container">
-                <h2>Book Your Wash</h2>
-                <form id="bookingForm">
-                    <div class="step" id="step1">
-                        <h3>Step 1: Select a Service</h3>
-                        <select name="service" required>
-                            <option value="" disabled selected>Select a service</option>
-                            <option value="Basic Wash">Basic Wash - SAR 75</option>
-                            <option value="Premium Wash">Premium Wash - SAR 150</option>
-                            <option value="Ultimate Detail">Ultimate Detail - SAR 300</option>
-                        </select>
-                    </div>
-                    <div class="step hidden" id="step2">
-                        <h3>Step 2: Date & Time</h3>
-                        <input type="date" name="date" required>
-                        <input type="time" name="time" required>
-                    </div>
-                    <div class="step hidden" id="step3">
-                        <h3>Step 3: Location & Car Details</h3>
-                        <input type="text" name="location" placeholder="Your location" required>
-                        <select name="carType" required>
-                            <option value="" disabled selected>Select car type</option>
-                            <option value="Sedan">Sedan</option>
-                            <option value="SUV">SUV</option>
-                            <option value="Luxury">Luxury</option>
-                        </select>
-                        <textarea name="instructions" placeholder="Special instructions"></textarea>
-                    </div>
-                    <button type="button" id="nextStep">Next</button>
+                <h2>Revenue Streams</h2>
+                <ul>
+                    <li><strong>Pay-Per-Wash:</strong> Fixed fees based on type and location.</li>
+                    <li><strong>Subscription Model:</strong> Weekly or monthly plans for regular customers.</li>
+                    <li><strong>Premium Services:</strong> Add-ons like waxing, detailing, and eco-friendly wash packages.</li>
+                </ul>
+            </div>
+        </section>
+
+        <!-- Key Considerations -->
+        <section id="key-considerations">
+            <div class="container">
+                <h2>Key Considerations</h2>
+                <p>We’ve communicated with Careem and Mrsool decision-makers to integrate the app with their platforms, extending our reach.</p>
+            </div>
+        </section>
+
+        <!-- Contact Section -->
+        <section id="contact">
+            <div class="container">
+                <h2>Contact Us</h2>
+                <p>Email: <a href="mailto:sameer.sk@gmail.com">sameer.sk@gmail.com</a></p>
+                <p>Phone: <a href="tel:+96654753545">+966 547 535 45</a></p>
+                <form id="contactForm">
+                    <input type="text" name="name" placeholder="Your Name" required>
+                    <input type="email" name="email" placeholder="Your Email" required>
+                    <textarea name="message" placeholder="Your Message" required></textarea>
+                    <button type="submit" class="btn-primary">Send Message</button>
                 </form>
             </div>
         </section>
