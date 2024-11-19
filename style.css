@@ -1,0 +1,128 @@
+/* Global Styles */
+body {
+    font-family: 'Inter', sans-serif;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 15px;
+}
+.hidden {
+    display: none;
+}
+
+/* Header */
+header {
+    background: linear-gradient(90deg, #4C1D95, #34D399);
+    color: white;
+    text-align: center;
+    padding: 50px 20px;
+}
+header nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+header .logo {
+    font-size: 24px;
+    font-weight: 700;
+}
+header .actions button {
+    background: white;
+    color: #4C1D95;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 5px;
+    cursor: pointer;
+    font-weight: 600;
+}
+
+/* Hero Section */
+.hero {
+    margin-top: 50px;
+}
+.hero h1 {
+    font-size: 36px;
+    margin-bottom: 20px;
+}
+.hero button {
+    background: white;
+    color: #4C1D95;
+    padding: 10px 30px;
+    border-radius: 5px;
+    border: none;
+    cursor: pointer;
+}
+
+/* Services Section */
+#services {
+    padding: 50px 0;
+    text-align: center;
+}
+#services .service-cards {
+    display: flex;
+    justify-content: space-around;
+    margin-top: 20px;
+}
+#services .card {
+    padding: 20px;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    text-align: center;
+}
+
+/* Value Proposition Section */
+#value-prop {
+    background: #F9F9F9;
+    padding: 50px 0;
+    text-align: center;
+}
+#value-prop .features {
+    display: flex;
+    justify-content: space-around;
+    margin-top: 20px;
+}
+#value-prop .feature {
+    max-width: 300px;
+}
+
+/* Booking Section */
+#booking {
+    padding: 50px 0;
+}
+#booking form {
+    max-width: 500px;
+    margin: 0 auto;
+    display: flex;
+    flex-direction: column;
+}
+#booking input,
+#booking select,
+#booking textarea {
+    margin: 10px 0;
+    padding: 10px;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+}
+
+/* Buttons */
+.btn-primary {
+    background: #34D399;
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 5px;
+    cursor: pointer;
+    font-weight: 600;
+}
+.btn-secondary {
+    background: #4C1D95;
+    color: white;
+    border: none;
+    padding: 10px 15px;
+    border-radius: 5px;
+    cursor: pointer;
+}
