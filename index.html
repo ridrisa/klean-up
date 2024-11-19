@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Klen Up - On-Demand Car Wash</title>
+    <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap" rel="stylesheet">
+</head>
+<body>
+    <header>
+        <div class="container">
+            <nav>
+                <div class="logo">Klen Up</div>
+                <div class="actions">
+                    <button class="btn-primary" id="loginBtn">Login</button>
+                </div>
+            </nav>
+            <div class="hero">
+                <h1>Eco-Friendly Car Wash at Your Location in Riyadh</h1>
+                <p>Convenience meets quality service. Book your car wash now!</p>
+                <button class="btn-primary" id="bookNow">Book Now</button>
+            </div>
+        </div>
+    </header>
+
+    <main>
+        <section id="services">
+            <div class="container">
+                <h2>Our Services</h2>
+                <div class="service-cards">
+                    <div class="card">
+                        <h3>Basic Wash</h3>
+                        <p>SAR 75</p>
+                        <button class="btn-secondary">Select</button>
+                    </div>
+                    <div class="card">
+                        <h3>Premium Wash</h3>
+                        <p>SAR 150</p>
+                        <button class="btn-secondary">Select</button>
+                    </div>
+                    <div class="card">
+                        <h3>Ultimate Detail</h3>
+                        <p>SAR 300</p>
+                        <button class="btn-secondary">Select</button>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="value-prop">
+            <div class="container">
+                <h2>Why Choose Us?</h2>
+                <div class="features">
+                    <div class="feature">
+                        <h3>Convenience</h3>
+                        <p>Get your car washed at home or work.</p>
+                    </div>
+                    <div class="feature">
+                        <h3>Professional Service</h3>
+                        <p>Trained staff with eco-friendly products.</p>
+                    </div>
+                    <div class="feature">
+                        <h3>Flexible Scheduling</h3>
+                        <p>Book at your preferred time.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="booking" class="hidden">
+            <div class="container">
+                <h2>Book Your Wash</h2>
+                <form id="bookingForm">
+                    <div class="step" id="step1">
+                        <h3>Step 1: Select a Service</h3>
+                        <select name="service" required>
+                            <option value="" disabled selected>Select a service</option>
+                            <option value="Basic Wash">Basic Wash - SAR 75</option>
+                            <option value="Premium Wash">Premium Wash - SAR 150</option>
+                            <option value="Ultimate Detail">Ultimate Detail - SAR 300</option>
+                        </select>
+                    </div>
+                    <div class="step hidden" id="step2">
+                        <h3>Step 2: Date & Time</h3>
+                        <input type="date" name="date" required>
+                        <input type="time" name="time" required>
+                    </div>
+                    <div class="step hidden" id="step3">
+                        <h3>Step 3: Location & Car Details</h3>
+                        <input type="text" name="location" placeholder="Your location" required>
+                        <select name="carType" required>
+                            <option value="" disabled selected>Select car type</option>
+                            <option value="Sedan">Sedan</option>
+                            <option value="SUV">SUV</option>
+                            <option value="Luxury">Luxury</option>
+                        </select>
+                        <textarea name="instructions" placeholder="Special instructions"></textarea>
+                    </div>
+                    <button type="button" id="nextStep">Next</button>
+                </form>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <p>&copy; 2024 Klen Up. All Rights Reserved.</p>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>
