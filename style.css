@@ -1,9 +1,10 @@
-/* Global Styles */
 body {
-    font-family: 'Inter', sans-serif;
+    font-family: 'Poppins', sans-serif;
     margin: 0;
     padding: 0;
     box-sizing: border-box;
+    color: #333;
+    background-color: #F9F9F9;
 }
 .container {
     max-width: 1200px;
@@ -18,17 +19,16 @@ body {
 header {
     background: linear-gradient(90deg, #4C1D95, #34D399);
     color: white;
-    text-align: center;
     padding: 50px 20px;
+    text-align: center;
 }
 header nav {
     display: flex;
     justify-content: space-between;
     align-items: center;
 }
-header .logo {
-    font-size: 24px;
-    font-weight: 700;
+header .logo img {
+    height: 50px;
 }
 header .actions button {
     background: white;
@@ -48,6 +48,10 @@ header .actions button {
     font-size: 36px;
     margin-bottom: 20px;
 }
+.hero p {
+    font-size: 18px;
+    margin-bottom: 30px;
+}
 .hero button {
     background: white;
     color: #4C1D95;
@@ -55,6 +59,7 @@ header .actions button {
     border-radius: 5px;
     border: none;
     cursor: pointer;
+    font-weight: 600;
 }
 
 /* Services Section */
@@ -62,9 +67,15 @@ header .actions button {
     padding: 50px 0;
     text-align: center;
 }
+#services h2 {
+    font-size: 28px;
+    margin-bottom: 30px;
+    color: #4C1D95;
+}
 #services .service-cards {
     display: flex;
     justify-content: space-around;
+    gap: 20px;
     margin-top: 20px;
 }
 #services .card {
@@ -72,44 +83,18 @@ header .actions button {
     border: 1px solid #ddd;
     border-radius: 8px;
     text-align: center;
+    background: white;
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
 }
-
-/* Value Proposition Section */
-#value-prop {
-    background: #F9F9F9;
-    padding: 50px 0;
-    text-align: center;
+#services .card h3 {
+    color: #4C1D95;
+    font-size: 20px;
 }
-#value-prop .features {
-    display: flex;
-    justify-content: space-around;
-    margin-top: 20px;
-}
-#value-prop .feature {
-    max-width: 300px;
-}
-
-/* Booking Section */
-#booking {
-    padding: 50px 0;
-}
-#booking form {
-    max-width: 500px;
-    margin: 0 auto;
-    display: flex;
-    flex-direction: column;
-}
-#booking input,
-#booking select,
-#booking textarea {
+#services .card p {
+    font-size: 16px;
     margin: 10px 0;
-    padding: 10px;
-    border: 1px solid #ddd;
-    border-radius: 5px;
 }
-
-/* Buttons */
-.btn-primary {
+#services .card button {
     background: #34D399;
     color: white;
     border: none;
@@ -118,11 +103,83 @@ header .actions button {
     cursor: pointer;
     font-weight: 600;
 }
-.btn-secondary {
+
+/* Value Proposition Section */
+#value-prop {
+    background: #F1F5F9;
+    padding: 50px 0;
+    text-align: center;
+}
+#value-prop h2 {
+    font-size: 28px;
+    margin-bottom: 30px;
+    color: #4C1D95;
+}
+#value-prop .features {
+    display: flex;
+    justify-content: space-around;
+    gap: 20px;
+}
+#value-prop .feature {
+    max-width: 300px;
+    background: white;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
+}
+#value-prop .feature h3 {
+    color: #4C1D95;
+    font-size: 20px;
+}
+#value-prop .feature p {
+    font-size: 16px;
+    margin-top: 10px;
+}
+
+/* Booking Section */
+#booking {
+    padding: 50px 0;
+}
+#booking h2 {
+    font-size: 28px;
+    margin-bottom: 30px;
+    color: #4C1D95;
+}
+#booking form {
+    max-width: 500px;
+    margin: 0 auto;
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+#booking input,
+#booking select,
+#booking textarea {
+    padding: 10px;
+    border: 2px solid #34D399;
+    border-radius: 5px;
+    font-size: 16px;
+    width: 100%;
+    box-sizing: border-box;
+}
+#booking button {
     background: #4C1D95;
     color: white;
     border: none;
-    padding: 10px 15px;
+    padding: 10px 20px;
     border-radius: 5px;
     cursor: pointer;
+    font-weight: 600;
+}
+
+/* Footer */
+footer {
+    background: #4C1D95;
+    color: white;
+    text-align: center;
+    padding: 20px 0;
+}
+footer p {
+    margin: 0;
+    font-size: 14px;
 }
