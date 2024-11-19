@@ -1,3 +1,4 @@
+/* Global Styles */
 body {
     font-family: 'Poppins', sans-serif;
     margin: 0;
@@ -6,11 +7,13 @@ body {
     color: #333;
     background-color: #F9F9F9;
 }
+
 .container {
     max-width: 1200px;
     margin: 0 auto;
     padding: 0 15px;
 }
+
 .hidden {
     display: none;
 }
@@ -19,17 +22,22 @@ body {
 header {
     background: linear-gradient(90deg, #4C1D95, #34D399);
     color: white;
-    padding: 50px 20px;
+    padding: 30px 20px;
     text-align: center;
 }
+
 header nav {
     display: flex;
     justify-content: space-between;
     align-items: center;
 }
+
 header .logo img {
-    height: 50px;
+    height: 60px;
+    max-width: 100%;
+    display: block;
 }
+
 header .actions button {
     background: white;
     color: #4C1D95;
@@ -38,20 +46,31 @@ header .actions button {
     border-radius: 5px;
     cursor: pointer;
     font-weight: 600;
+    transition: background 0.3s ease;
+}
+
+header .actions button:hover {
+    background: #E5E7EB;
 }
 
 /* Hero Section */
 .hero {
-    margin-top: 50px;
+    margin-top: 30px;
+    text-align: center;
 }
+
 .hero h1 {
     font-size: 36px;
     margin-bottom: 20px;
+    color: white;
 }
+
 .hero p {
     font-size: 18px;
     margin-bottom: 30px;
+    color: #F9F9F9;
 }
+
 .hero button {
     background: white;
     color: #4C1D95;
@@ -60,6 +79,30 @@ header .actions button {
     border: none;
     cursor: pointer;
     font-weight: 600;
+    transition: background 0.3s ease, color 0.3s ease;
+}
+
+.hero button:hover {
+    background: #34D399;
+    color: white;
+}
+
+/* About Section */
+#about {
+    background: #F1F5F9;
+    padding: 50px 0;
+    text-align: center;
+}
+
+#about h2 {
+    color: #4C1D95;
+    font-size: 28px;
+    margin-bottom: 20px;
+}
+
+#about p {
+    font-size: 18px;
+    line-height: 1.6;
 }
 
 /* Services Section */
@@ -67,17 +110,21 @@ header .actions button {
     padding: 50px 0;
     text-align: center;
 }
+
 #services h2 {
     font-size: 28px;
     margin-bottom: 30px;
     color: #4C1D95;
 }
+
 #services .service-cards {
     display: flex;
     justify-content: space-around;
     gap: 20px;
     margin-top: 20px;
+    flex-wrap: wrap;
 }
+
 #services .card {
     padding: 20px;
     border: 1px solid #ddd;
@@ -85,15 +132,20 @@ header .actions button {
     text-align: center;
     background: white;
     box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
+    flex: 1 1 calc(33% - 20px);
+    max-width: 300px;
 }
+
 #services .card h3 {
     color: #4C1D95;
     font-size: 20px;
 }
+
 #services .card p {
     font-size: 16px;
     margin: 10px 0;
 }
+
 #services .card button {
     background: #34D399;
     color: white;
@@ -102,59 +154,121 @@ header .actions button {
     border-radius: 5px;
     cursor: pointer;
     font-weight: 600;
+    transition: background 0.3s ease;
 }
 
-/* Value Proposition Section */
-#value-prop {
-    background: #F1F5F9;
+#services .card button:hover {
+    background: #2D9B6E;
+}
+
+/* Problems and Solutions Section */
+#problems-solutions {
     padding: 50px 0;
     text-align: center;
+    background: #F9F9F9;
 }
-#value-prop h2 {
+
+#problems-solutions h2 {
     font-size: 28px;
     margin-bottom: 30px;
     color: #4C1D95;
 }
-#value-prop .features {
+
+#problems-solutions .problems {
     display: flex;
     justify-content: space-around;
+    margin-bottom: 30px;
     gap: 20px;
+    flex-wrap: wrap;
 }
-#value-prop .feature {
+
+.problem, .solution {
     max-width: 300px;
     background: white;
     padding: 20px;
     border-radius: 8px;
     box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
+    flex: 1 1 calc(50% - 20px);
+    text-align: center;
 }
-#value-prop .feature h3 {
-    color: #4C1D95;
+
+.problem h3, .solution h3 {
     font-size: 20px;
+    color: #34D399;
 }
-#value-prop .feature p {
+
+.problem p, .solution p {
     font-size: 16px;
     margin-top: 10px;
 }
 
-/* Booking Section */
-#booking {
+/* Revenue Streams Section */
+#revenue-streams {
     padding: 50px 0;
+    text-align: center;
 }
-#booking h2 {
+
+#revenue-streams h2 {
     font-size: 28px;
     margin-bottom: 30px;
     color: #4C1D95;
 }
-#booking form {
-    max-width: 500px;
+
+#revenue-streams ul {
+    list-style-type: none;
+    padding: 0;
+    font-size: 18px;
+}
+
+#revenue-streams li {
+    margin-bottom: 15px;
+}
+
+/* Key Considerations Section */
+#key-considerations {
+    padding: 50px 0;
+    text-align: center;
+    background: #F1F5F9;
+}
+
+#key-considerations h2 {
+    font-size: 28px;
+    margin-bottom: 20px;
+    color: #4C1D95;
+}
+
+#key-considerations p {
+    font-size: 18px;
+    line-height: 1.6;
+}
+
+/* Contact Section */
+#contact {
+    padding: 50px 0;
+    text-align: center;
+}
+
+#contact h2 {
+    font-size: 28px;
+    margin-bottom: 20px;
+    color: #4C1D95;
+}
+
+#contact p {
+    font-size: 18px;
+    margin-bottom: 15px;
+}
+
+#contactForm {
+    max-width: 600px;
     margin: 0 auto;
     display: flex;
     flex-direction: column;
     gap: 15px;
 }
-#booking input,
-#booking select,
-#booking textarea {
+
+#contactForm input,
+#contactForm textarea {
     padding: 10px;
     border: 2px solid #34D399;
     border-radius: 5px;
@@ -162,7 +276,8 @@ header .actions button {
     width: 100%;
     box-sizing: border-box;
 }
-#booking button {
+
+#contactForm button {
     background: #4C1D95;
     color: white;
     border: none;
@@ -170,6 +285,11 @@ header .actions button {
     border-radius: 5px;
     cursor: pointer;
     font-weight: 600;
+    transition: background 0.3s ease;
+}
+
+#contactForm button:hover {
+    background: #34D399;
 }
 
 /* Footer */
@@ -179,7 +299,23 @@ footer {
     text-align: center;
     padding: 20px 0;
 }
+
 footer p {
     margin: 0;
     font-size: 14px;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    #services .service-cards,
+    #problems-solutions .problems {
+        flex-direction: column;
+    }
+
+    #services .card,
+    .problem, 
+    .solution {
+        flex: 1 1 100%;
+        max-width: 100%;
+    }
 }
