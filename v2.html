@@ -1,0 +1,630 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Klen Up - On-Demand Car Wash Service</title>
+    <meta name="description" content="Klen Up is an on-demand car wash service that brings high-quality, eco-friendly cleaning to your location in Riyadh. Book online and enjoy hassle-free, convenient car wash services wherever you are.">
+    <meta name="keywords" content="Klen Up, On-Demand Car Wash, Mobile Car Wash, Eco-Friendly Car Wash, Riyadh Car Services">
+    <meta name="author" content="Klen Up">
+    <!-- Open Graph Meta Tags for Social Media -->
+    <meta property="og:title" content="Klen Up - On-Demand Car Wash Service">
+    <meta property="og:description" content="Experience the convenience of on-demand, eco-friendly car wash services wherever you are in Riyadh. Book online with Klen Up today!">
+    <meta property="og:image" content="https://source.unsplash.com/1600x900/?car-wash,cleaning">
+    <meta property="og:url" content="https://www.klenup.com">
+    <meta property="og:type" content="website">
+    <!-- Font Awesome -->
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">
+    <!-- Bootstrap CSS -->
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.3.0/css/bootstrap.min.css" rel="stylesheet">
+    <!-- AOS (Animate On Scroll) CSS -->
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.css" rel="stylesheet">
+    <style>
+        :root {
+            --primary-blue: #007BFF;
+            --dark-blue: #0056b3;
+            --black: #000000;
+            --white: #ffffff;
+            --gray-100: #f8f9fa;
+            --gray-200: #e9ecef;
+            --gray-400: #ced4da;
+            --gray-600: #6c757d;
+            --gray-800: #343a40;
+            --transition-speed: 0.3s;
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Arial', sans-serif;
+        }
+
+        body {
+            scroll-behavior: smooth;
+        }
+
+        /* Top Bar */
+        .top-bar {
+            background-color: var(--black);
+            color: var(--white);
+            padding: 0.5rem 0;
+        }
+
+        .top-bar .container {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .contact-info span {
+            margin-right: 1rem;
+            display: inline-flex;
+            align-items: center;
+        }
+
+        .contact-info i {
+            margin-right: 0.5rem;
+        }
+
+        .language-selector button {
+            background: none;
+            border: none;
+            color: var(--white);
+            cursor: pointer;
+            padding: 0.25rem 0.5rem;
+            font-size: 1rem;
+            transition: color var(--transition-speed);
+        }
+
+        .language-selector button:hover {
+            color: var(--primary-blue);
+        }
+
+        /* Header */
+        header {
+            position: sticky;
+            top: 0;
+            background: var(--white);
+            z-index: 1000;
+            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+        }
+
+        .navbar-brand img {
+            width: 150px;
+            height: auto;
+        }
+
+        .navbar-nav .nav-link {
+            color: var(--black);
+            transition: color var(--transition-speed);
+        }
+
+        .navbar-nav .nav-link:hover {
+            color: var(--primary-blue);
+        }
+
+        /* Hero Section */
+        .hero {
+            background: linear-gradient(45deg, var(--primary-blue), var(--dark-blue));
+            color: var(--white);
+            text-align: center;
+            padding: 6rem 1rem;
+            background-image: url('https://source.unsplash.com/1600x900/?car-wash,cleaning');
+            background-size: cover;
+            background-position: center;
+            position: relative;
+        }
+
+        .hero::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background-color: rgba(0, 123, 255, 0.7);
+            z-index: 1;
+        }
+
+        .hero .container {
+            position: relative;
+            z-index: 2;
+        }
+
+        .hero h1 {
+            font-size: 3rem;
+            margin-bottom: 1.5rem;
+            animation: fadeInDown 1s ease-out;
+        }
+
+        .hero p {
+            font-size: 1.25rem;
+            margin-bottom: 2rem;
+            animation: fadeInUp 1s ease-out;
+        }
+
+        .btn-primary {
+            background-color: var(--white);
+            color: var(--primary-blue);
+            border: none;
+            padding: 0.75rem 1.5rem;
+            font-weight: bold;
+            transition: background-color var(--transition-speed), color var(--transition-speed);
+        }
+
+        .btn-primary:hover {
+            background-color: var(--gray-100);
+            color: var(--primary-blue);
+        }
+
+        /* Sections */
+        .section {
+            padding: 4rem 1rem;
+        }
+
+        .section-title {
+            text-align: center;
+            font-size: 2.25rem;
+            margin-bottom: 3rem;
+            color: var(--black);
+            position: relative;
+        }
+
+        .section-title::after {
+            content: '';
+            width: 60px;
+            height: 4px;
+            background-color: var(--primary-blue);
+            position: absolute;
+            left: 50%;
+            bottom: -10px;
+            transform: translateX(-50%);
+        }
+
+        /* Value Proposition Section */
+        .value-proposition {
+            background-color: var(--gray-100);
+        }
+
+        .value-proposition .icon {
+            font-size: 2rem;
+            color: var(--primary-blue);
+            margin-bottom: 1rem;
+        }
+
+        /* Business Model Section */
+        .business-model {
+            background-color: var(--white);
+        }
+
+        .business-model .icon {
+            font-size: 2rem;
+            color: var(--primary-blue);
+            margin-bottom: 1rem;
+        }
+
+        /* Revenue Streams Section */
+        .revenue-streams {
+            background-color: var(--gray-100);
+        }
+
+        .revenue-streams .icon {
+            font-size: 2rem;
+            color: var(--primary-blue);
+            margin-bottom: 1rem;
+        }
+
+        /* Key Considerations Section */
+        .key-considerations {
+            background-color: var(--white);
+        }
+
+        .key-considerations .icon {
+            font-size: 2rem;
+            color: var(--primary-blue);
+            margin-bottom: 1rem;
+        }
+
+        /* Founder Experience / Team Fit Section */
+        .team-fit {
+            background-color: var(--gray-100);
+        }
+
+        .team-fit .icon {
+            font-size: 2rem;
+            color: var(--primary-blue);
+            margin-bottom: 1rem;
+        }
+
+        /* Support Section */
+        .support .accordion-button {
+            background-color: var(--gray-100);
+            color: var(--black);
+            transition: background-color var(--transition-speed), color var(--transition-speed);
+        }
+
+        .support .accordion-button:after {
+            filter: invert(1);
+        }
+
+        /* Contact Section */
+        .contact .form-control:focus {
+            border-color: var(--primary-blue);
+            box-shadow: none;
+        }
+
+        .contact .btn-submit {
+            background-color: var(--primary-blue);
+            color: var(--white);
+            border: none;
+            padding: 0.75rem 1.5rem;
+            font-weight: bold;
+            transition: background-color var(--transition-speed);
+        }
+
+        .contact .btn-submit:hover {
+            background-color: var(--dark-blue);
+        }
+
+        /* Footer */
+        footer {
+            background-color: var(--black);
+            color: var(--gray-400);
+            padding: 2rem 1rem;
+            text-align: center;
+        }
+
+        footer a {
+            color: var(--primary-blue);
+            text-decoration: none;
+            margin: 0 0.5rem;
+            transition: color var(--transition-speed);
+        }
+
+        footer a:hover {
+            color: var(--white);
+        }
+
+        .social-links a {
+            color: var(--gray-400);
+            margin: 0 0.5rem;
+            font-size: 1.25rem;
+            transition: color var(--transition-speed);
+        }
+
+        .social-links a:hover {
+            color: var(--primary-blue);
+        }
+
+        /* Animations */
+        @keyframes fadeInDown {
+            from {
+                opacity: 0;
+                transform: translateY(-20px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        @keyframes fadeInUp {
+            from {
+                opacity: 0;
+                transform: translateY(20px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        /* Responsive Adjustments */
+        @media (max-width: 768px) {
+            .hero h1 {
+                font-size: 2.5rem;
+            }
+
+            .section-title {
+                font-size: 2rem;
+            }
+
+            .testimonial-item {
+                min-height: unset;
+            }
+        }
+    </style>
+</head>
+<body>
+    <!-- Top Bar -->
+    <div class="top-bar">
+        <div class="container d-flex justify-content-between align-items-center">
+            <div class="contact-info">
+                <span><i class="fas fa-phone"></i> +96654753545</span>
+                <span><i class="fas fa-envelope"></i> sameer.sk@gmail.com</span>
+            </div>
+            <div class="language-selector">
+                <button id="lang-en" aria-label="Switch to English">English</button> |
+                <button id="lang-ar" aria-label="Switch to Arabic">عربي</button>
+            </div>
+        </div>
+    </div>
+
+    <!-- Header -->
+    <header>
+        <nav class="navbar navbar-expand-lg navbar-light">
+            <div class="container">
+                <a class="navbar-brand" href="#">
+                    <img src="logo.jpeg" alt="Klen Up Logo">
+                </a>
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavDropdown" aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+                <div class="collapse navbar-collapse" id="navbarNavDropdown">
+                    <ul class="navbar-nav ms-auto">
+                        <li class="nav-item"><a class="nav-link" href="#hero">Home</a></li>
+                        <li class="nav-item"><a class="nav-link" href="#business-model">Business Model</a></li>
+                        <li class="nav-item"><a class="nav-link" href="#value-proposition">Value Proposition</a></li>
+                        <li class="nav-item"><a class="nav-link" href="#revenue-streams">Revenue Streams</a></li>
+                        <li class="nav-item"><a class="nav-link" href="#key-considerations">Key Considerations</a></li>
+                        <li class="nav-item"><a class="nav-link" href="#team-fit">Team Fit</a></li>
+                        <li class="nav-item"><a class="nav-link" href="#contact">Contact</a></li>
+                    </ul>
+                </div>
+            </div>
+        </nav>
+    </header>
+
+    <!-- Hero Section -->
+    <section id="hero" class="hero" data-aos="fade-in">
+        <div class="container">
+            <h1 data-aos="fade-down">Klen Up</h1>
+            <p data-aos="fade-up">On-Demand Car Wash Service in Riyadh</p>
+            <a href="#contact" class="btn btn-primary" data-aos="zoom-in">Book Now</a>
+        </div>
+    </section>
+
+    <!-- Business Model and Traction Section -->
+    <section id="business-model" class="section business-model" data-aos="fade-up">
+        <div class="container">
+            <h2 class="section-title">Business Model and Traction</h2>
+            <div class="row g-4">
+                <div class="col-md-6" data-aos="fade-right">
+                    <h5>Business Model</h5>
+                    <p>Klen Up operates on an on-demand car wash model, providing convenience and flexibility to customers by bringing high-quality, eco-friendly cleaning services directly to their location. Our business model focuses on multiple revenue streams to ensure sustainability and growth.</p>
+                </div>
+                <div class="col-md-6" data-aos="fade-left">
+                    <h5>Traction</h5>
+                    <p>Since our founding in 2023, Klen Up has successfully completed numerous car wash appointments in Riyadh, gaining positive feedback for our convenience and service quality. We are currently in the MVP Phase 1, focusing on refining our service delivery and expanding our customer base.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Value Proposition Section -->
+    <section id="value-proposition" class="section value-proposition" data-aos="fade-up">
+        <div class="container">
+            <h2 class="section-title">Our Value Proposition</h2>
+            <div class="row g-4">
+                <div class="col-md-6" data-aos="fade-right">
+                    <div class="d-flex align-items-center mb-3">
+                        <i class="fas fa-car-side icon me-3"></i>
+                        <h5>Convenience</h5>
+                    </div>
+                    <p>Offering car wash services that come to customers wherever they are, eliminating the need to drive to a physical location.</p>
+                </div>
+                <div class="col-md-6" data-aos="fade-left">
+                    <div class="d-flex align-items-center mb-3">
+                        <i class="fas fa-clock icon me-3"></i>
+                        <h5>On-Demand Service</h5>
+                    </div>
+                    <p>Customers can schedule a wash at their preferred time, making the service flexible and adaptable to busy schedules.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Revenue Streams Section -->
+    <section id="revenue-streams" class="section revenue-streams" data-aos="fade-up">
+        <div class="container">
+            <h2 class="section-title">Revenue Streams</h2>
+            <div class="row g-4">
+                <div class="col-md-4" data-aos="fade-up" data-aos-delay="100">
+                    <div class="d-flex align-items-center mb-3">
+                        <i class="fas fa-money-bill-wave icon me-3"></i>
+                        <h5>Pay-Per-Wash</h5>
+                    </div>
+                    <p>Charge customers a set fee per wash depending on type and location.</p>
+                </div>
+                <div class="col-md-4" data-aos="fade-up" data-aos-delay="200">
+                    <div class="d-flex align-items-center mb-3">
+                        <i class="fas fa-subscript icon me-3"></i>
+                        <h5>Subscription Model</h5>
+                    </div>
+                    <p>Offer monthly or weekly subscriptions for regular customers to provide discounted rates and stable revenue.</p>
+                </div>
+                <div class="col-md-4" data-aos="fade-up" data-aos-delay="300">
+                    <div class="d-flex align-items-center mb-3">
+                        <i class="fas fa-star icon me-3"></i>
+                        <h5>Premium Services</h5>
+                    </div>
+                    <p>Additional services like waxing, interior detailing, and eco-friendly wash packages at higher price points.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Key Considerations Section -->
+    <section id="key-considerations" class="section key-considerations" data-aos="fade-up">
+        <div class="container">
+            <h2 class="section-title">Key Considerations</h2>
+            <div class="row g-4">
+                <div class="col-md-6" data-aos="fade-right">
+                    <h5>Partnerships</h5>
+                    <p>We have verbally communicated with Mrsool and Careem's decision-makers to have our app showcased on their platforms, expanding our reach and accessibility to a broader customer base.</p>
+                </div>
+                <div class="col-md-6" data-aos="fade-left">
+                    <h5>Regulatory Environment</h5>
+                    <p>The Saudi Government mandates automation for car washes, resulting in non-compliant services being shut down. This regulation creates an opportunity as traffic will divert to compliant, app-based services like Klen Up.</p>
+                    <p>We believe that the automotive industry will become the second biggest industry after food delivery, providing a vast market for our services.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Founder Experience / Team Fit Section -->
+    <section id="team-fit" class="section team-fit" data-aos="fade-up">
+        <div class="container">
+            <h2 class="section-title">Founder Experience & Team Fit</h2>
+            <div class="row g-4">
+                <div class="col-md-6" data-aos="fade-right">
+                    <h5>Leadership</h5>
+                    <p>Our founder has extensive experience in routing enhancement, vendor management, product design, data analysis, quality management, training design, fleet management, lead onboarding processes, project leadership, and quality control.</p>
+                </div>
+                <div class="col-md-6" data-aos="fade-left">
+                    <h5>Our Team</h5>
+                    <ul class="list-unstyled">
+                        <li><i class="fas fa-check-circle text-primary me-2"></i>Routing Enhancement</li>
+                        <li><i class="fas fa-check-circle text-primary me-2"></i>Vendor Management</li>
+                        <li><i class="fas fa-check-circle text-primary me-2"></i>Product Design</li>
+                        <li><i class="fas fa-check-circle text-primary me-2"></i>Data Analyst</li>
+                        <li><i class="fas fa-check-circle text-primary me-2"></i>Quality Management</li>
+                        <li><i class="fas fa-check-circle text-primary me-2"></i>Training Design</li>
+                        <li><i class="fas fa-check-circle text-primary me-2"></i>Fleet Manager</li>
+                        <li><i class="fas fa-check-circle text-primary me-2"></i>Lead Onboarding Process</li>
+                        <li><i class="fas fa-check-circle text-primary me-2"></i>Project Leader</li>
+                        <li><i class="fas fa-check-circle text-primary me-2"></i>Quality Controller</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Problems and Solutions Section -->
+    <section id="problems-solutions" class="section" data-aos="fade-up">
+        <div class="container">
+            <h2 class="section-title">Problems & Solutions</h2>
+            <div class="row g-4">
+                <!-- Problems -->
+                <div class="col-md-6" data-aos="fade-right">
+                    <h5>Problems</h5>
+                    <ul class="list-unstyled">
+                        <li><i class="fas fa-exclamation-triangle text-danger me-2"></i>Traditional car wash services are often time-consuming and non-secure.</li>
+                    </ul>
+                </div>
+                <!-- Solutions -->
+                <div class="col-md-6" data-aos="fade-left">
+                    <h5>Solutions</h5>
+                    <ul class="list-unstyled">
+                        <li><i class="fas fa-check-circle text-success me-2"></i>Klen Up reduces the hassle of leaving home or office, saving customers time.</li>
+                        <li><i class="fas fa-check-circle text-success me-2"></i>Live video monitoring ensures the security and quality of the service.</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Testimonials Section -->
+    <section id="testimonials" class="section testimonials" data-aos="fade-up">
+        <div class="container">
+            <h2 class="section-title">What Our Clients Say</h2>
+            <div id="testimonialCarousel" class="carousel slide" data-bs-ride="carousel">
+                <div class="carousel-inner">
+                    <div class="carousel-item active">
+                        <div class="testimonial-item">
+                            <p>"Klen Up's on-demand service is a game-changer. I no longer have to spend time driving to a car wash."</p>
+                            <h5>- Fatima A.</h5>
+                        </div>
+                    </div>
+                    <div class="carousel-item">
+                        <div class="testimonial-item">
+                            <p>"The live video feature gives me peace of mind knowing my car is being cleaned securely and professionally."</p>
+                            <h5>- Omar S.</h5>
+                        </div>
+                    </div>
+                    <div class="carousel-item">
+                        <div class="testimonial-item">
+                            <p>"Klen Up offers flexible scheduling that fits perfectly into my busy lifestyle. Highly recommend their services."</p>
+                            <h5>- Layla M.</h5>
+                        </div>
+                    </div>
+                </div>
+                <button class="carousel-control-prev" type="button" data-bs-target="#testimonialCarousel" data-bs-slide="prev">
+                    <span class="carousel-control-prev-icon bg-dark rounded-circle p-3" aria-hidden="true"></span>
+                    <span class="visually-hidden">Previous</span>
+                </button>
+                <button class="carousel-control-next" type="button" data-bs-target="#testimonialCarousel" data-bs-slide="next">
+                    <span class="carousel-control-next-icon bg-dark rounded-circle p-3" aria-hidden="true"></span>
+                    <span class="visually-hidden">Next</span>
+                </button>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section id="contact" class="section contact" data-aos="fade-up">
+        <div class="container">
+            <h2 class="section-title">Get in Touch</h2>
+            <div class="row g-4">
+                <div class="col-md-6" data-aos="fade-right">
+                    <p>Contact us to schedule your next car wash or to learn more about our services.</p>
+                    <p><i class="fas fa-map-marker-alt"></i> Riyadh, Saudi Arabia</p>
+                    <p><i class="fas fa-phone"></i> +96654753545</p>
+                    <p><i class="fas fa-envelope"></i> sameer.sk@gmail.com</p>
+                </div>
+                <div class="col-md-6" data-aos="fade-left">
+                    <form action="#" method="POST">
+                        <div class="mb-3">
+                            <input type="text" class="form-control" placeholder="Name" aria-label="Name" name="name" required>
+                        </div>
+                        <div class="mb-3">
+                            <input type="email" class="form-control" placeholder="Email" aria-label="Email" name="email" required>
+                        </div>
+                        <div class="mb-3">
+                            <textarea class="form-control" rows="4" placeholder="Message" aria-label="Message" name="message" required></textarea>
+                        </div>
+                        <button type="submit" class="btn btn-submit w-100">Send Message</button>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer>
+        <div class="container">
+            <p>&copy; 2023 Klen Up. All rights reserved. | <a href="#">Privacy Policy</a> | <a href="#">Terms of Service</a></p>
+            <div class="social-links">
+                <a href="#" aria-label="Facebook"><i class="fab fa-facebook-f"></i></a>
+                <a href="#" aria-label="Twitter"><i class="fab fa-twitter"></i></a>
+                <a href="#" aria-label="LinkedIn"><i class="fab fa-linkedin-in"></i></a>
+                <a href="#" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Bootstrap JS and dependencies -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.3.0/js/bootstrap.bundle.min.js"></script>
+    <!-- AOS (Animate On Scroll) JS -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.js"></script>
+    <script>
+        // Initialize AOS
+        AOS.init({
+            duration: 1000,
+            once: true
+        });
+
+        // Optional: Language Switching Functionality
+        document.getElementById('lang-en').addEventListener('click', function() {
+            // Implement language switch to English
+            alert('Switched to English');
+        });
+
+        document.getElementById('lang-ar').addEventListener('click', function() {
+            // Implement language switch to Arabic
+            alert('تم التحويل إلى العربية');
+        });
+    </script>
+</body>
+</html>
